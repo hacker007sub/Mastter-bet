@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Bet</title>
+    <link rel="stylesheet" href="style.css"> <!-- Importa o CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Tela de carregamento -->
+    <div class="loading-screen">
+        <div class="spinner"></div>
+        <div class="loading-text">Processando...</div>
+    </div>
+
+    <!-- Tela principal -->
+    <div class="main-content">
+        <div class="top-bar">
+            <span>MASTER BET</span>
+        </div>
+
+        <!-- Efeito de "digitando" que aparece no meio da tela -->
+        <div class="typing-indicator" id="typing-indicator">
+            <p>Alguém está digitando...</p>
+        </div>
+
+        <!-- Mensagem de boas-vindas -->
+        <div class="welcome-message" id="welcome-message">
+            <p>Seja bem-vindo ao Suporte da Master Bet, qual é sua dúvida?!</p>
+        </div>
+
+        <!-- Área onde as mensagens aparecem -->
+        <div class="message-box" id="message-box">
+            <!-- Mensagens vão aparecer aqui -->
+        </div>
+
+        <!-- Barra inferior com input e botão -->
+        <div class="bottom-bar">
+            <input type="text" id="message-input" class="input-field" placeholder="Digite sua mensagem...">
+            <button class="send-button">
+                <i class="fa-solid fa-paper-plane"></i> <!-- Ícone de enviar -->
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Importa o JavaScript -->
+</body>
+</html>

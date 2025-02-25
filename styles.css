@@ -1,0 +1,724 @@
+/* Reset e Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6; /* Fundo suave */
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Barra Superior */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a3d5f;
+    padding: 15px 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #1e2d44;
+}
+
+.brand-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.brand-name:hover {
+    color: #a9d1b7;
+}
+
+/* Menu Toggle (Hamburguer) */
+.menu-toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Barra de Opções Roláveis */
+.scrollable-bar {
+    background-color: #fff;
+    padding: 10px 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.scrollable-bar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.scrollable-bar ul li {
+    margin-right: 20px;
+}
+
+.scrollable-bar ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #555;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.scrollable-bar ul li a:hover {
+    color: #1e3d58;
+    background-color: #e6f2f0;
+    transform: scale(1.05);
+}
+
+/* Estilos do Menu */
+.menu {
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+.menu.active {
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    border-bottom: 1px solid #ddd;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.menu ul li a:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* Estilos do Formulário de Login */
+.login-container {
+    width: 90%;
+    max-width: 350px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #2a3d5f;
+}
+
+.login-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.login-container input {
+    width: 90%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s ease;
+    background-color: #f9f9f9;
+    outline: none;
+}
+
+.login-container input:focus {
+    border-color: #2a3d5f;
+    box-shadow: 0 0 5px rgba(42, 61, 95, 0.3);
+}
+
+.login-container button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #2a3d5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #1e2d44;
+    transform: scale(1.05);
+}
+
+/* Termos e Políticas */
+.terms-container {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.terms-container p {
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.terms-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.terms-links a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #2a3d5f;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.terms-links a i {
+    font-size: 16px;
+}
+
+.terms-links a:hover {
+    color: white;
+    background: #2a3d5f;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+/* Barra inferior */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #2a3d5f;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-bar-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bottom-bar-icon i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.bottom-bar-icon span {
+    font-size: 12px;
+}
+
+/* Destaque para o ícone do meio */
+.bottom-bar-icon.active {
+    background-color: #1e2d44;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bottom-bar-icon:hover {
+    color: #1e2d44;
+    transform: scale(1.1);
+}
+
+.bottom-bar-icon.active:hover {
+    background-color: #283b51;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%;
+    }
+
+    .scrollable-bar ul li a {
+        font-size: 16px;
+    }
+
+    .bottom-bar {
+        height: 60px;
+        font-size: 12px;
+    }
+}
+
+/* Reset e Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Barra Superior */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a3d5f;
+    padding: 15px 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #1e2d44;
+    animation: slideDown 0.8s ease-in-out;
+}
+
+/* Animação da barra superior */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Animação dos botões */
+button {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efeito hover nos botões */
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão Menu Toggle */
+.menu-toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Animação de movimento ao clicar no menu */
+.menu-toggle:active {
+    transform: rotate(90deg);
+}
+
+/* Animação dos elementos do formulário */
+.login-container {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+/* Animação do formulário */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Inputs e botão do formulário */
+input, button {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animação ao focar nos inputs */
+input:focus {
+    transform: scale(1.03);
+}
+
+/* Barra inferior */
+.bottom-bar {
+    position: fixed;
+    bottom: -70px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #2a3d5f;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    transition: bottom 0.6s ease-in-out;
+    animation: slideUp 1s ease-in-out forwards;
+}
+
+/* Animação da barra inferior */
+@keyframes slideUp {
+    from {
+        bottom: -70px;
+    }
+    to {
+        bottom: 0;
+    }
+}
+
+/* Ícones da barra inferior */
+.bottom-bar-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse na barra inferior */
+.bottom-bar-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Animação suave no menu lateral */
+.menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    width: 220px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Quando o menu estiver ativo */
+.menu.active {
+    display: block;
+    transform: translateX(0);
+}
+
+/* Animação ao abrir os links */
+.menu ul li {
+    opacity: 0;
+    transform: translateX(20px);
+    animation: fadeInLeft 0.5s ease-in-out forwards;
+}
+
+/* Animação de entrada para os itens do menu */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%;
+    }
+
+    .bottom-bar {
+        height: 60px;
+        font-size: 12px;
+    }
+}
+
+/* Botão Flutuante (FAB) */
+.fab {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #2a3d5f;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 24px;
+    text-align: center; /* Garantir que o texto do ícone esteja centralizado */
+}
+
+.fab i {
+    font-size: 30px; /* Ajuste o tamanho do ícone para garantir que ele se encaixe bem */
+    margin: 0; /* Garantir que o ícone não tenha margem */
+}
+
+/* Efeito hover no botão FAB */
+.fab:hover {
+    background-color: #1e2d44;
+    transform: scale(1.1);
+}
+
+/* Animação de entrada do FAB */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fab {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Banner de Cookies */
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+/* Link para mais informações */
+#cookie-banner a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#cookie-banner a:hover {
+    text-decoration: underline;
+}
+
+/* Botão de Aceitar */
+#cookie-banner button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#cookie-banner button:hover {
+    background: #45a049;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    #cookie-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #cookie-banner button {
+        width: 100%;
+        max-width: 200px;
+        margin-top: 10px;
+    }
+}
+
+/* Estilo para o Contêiner das Abas */
+.tabs-container {
+    display: flex;
+    flex-direction: column; /* Organiza as abas na vertical */
+    justify-content: flex-start;
+    align-items: flex-start; /* Alinha as abas à esquerda */
+    background: white;
+    padding: 20px;
+    border-right: 2px solid #ddd;
+    max-height: 90vh; /* Limita a altura da área das abas */
+    overflow-y: auto; /* Habilita a rolagem vertical */
+}
+
+/* Estilo das Abas */
+.tab {
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+    border-radius: 5px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px; /* Espaçamento entre as abas */
+}
+
+.tab i {
+    font-size: 18px;
+}
+
+.tab:hover {
+    background-color: #e6f2f0;
+    transform: scale(1.05);
+}
+
+.tab.active {
+    background-color: #2a3d5f;
+    color: white;
+}
+
+/* Conteúdo das Abas */
+.tab-content {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto; /* Centraliza o conteúdo das abas */
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* Estilização do campo de seleção (Método de Pagamento) */
+.login-container select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #555;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Adicionar os ícones ao lado das opções no select */
+.login-container select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Estilização do campo quando estiver em foco */
+.login-container select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Estilização do rótulo do campo de seleção */
+.login-container label[for="metodo-pagamento"] {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Ícones dentro das opções (métodos de pagamento) */
+.select-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.select-option i {
+    margin-right: 10px;
+}
+
+
+.login-container button[type="submit"]:hover {
+    background-color: #45a049;
+}

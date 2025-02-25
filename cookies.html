@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Cookies - Master Bet</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Estilo Geral */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: #fff;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Animação de Fade-In */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Cabeçalho */
+        .header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Conteúdo Principal */
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Seções */
+        .cookies-info, .jogos-info, .restricao-idade {
+            margin-bottom: 25px;
+            text-align: left;
+            padding: 15px;
+            border-left: 5px solid #ffcc00;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        /* Animação de Slide-In */
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Títulos */
+        h2 {
+            color: #ffcc00;
+            text-shadow: 1px 1px 5px rgba(255, 204, 0, 0.5);
+        }
+
+        /* Lista */
+        ul {
+            list-style-type: disc;
+            margin: 10px 0 10px 20px;
+        }
+
+        /* Restrição para menores de 18 anos */
+        .restricao-idade {
+            background: #ff4444;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+            border-left: 5px solid yellow;
+            animation: pulse 2s infinite;
+        }
+
+        /* Efeito Pulsante no 18+ */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Ícone de proibição */
+        .restricao-idade i {
+            font-size: 22px;
+            margin-right: 5px;
+        }
+
+        /* Imagem de 18+ */
+        .img-18 {
+            width: 90px;
+            margin-top: 10px;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+        }
+
+        /* Rodapé */
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            margin-top: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: 0.3s ease;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+            color: #fff;
+        }
+
+        /* Botões de Ação */
+        .btn {
+            display: inline-block;
+            background: #ffcc00;
+            color: #000;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        Política de Cookies
+    </header>
+
+    <main class="container">
+        <section class="cookies-info">
+            <h2>O que são Cookies?</h2>
+            <p>Os cookies são pequenos arquivos de texto armazenados no seu navegador quando você visita nosso site. Eles ajudam a melhorar sua experiência, personalizar conteúdos e analisar o tráfego da plataforma.</p>
+
+            <h2>Como usamos os Cookies?</h2>
+            <p>Utilizamos cookies para:</p>
+            <ul>
+                <li>Garantir o funcionamento adequado do site.</li>
+                <li>Personalizar a experiência do usuário.</li>
+                <li>Melhorar a segurança e detectar atividades fraudulentas.</li>
+                <li>Coletar estatísticas sobre o uso da plataforma.</li>
+            </ul>
+        </section>
+
+        <section class="jogos-info">
+            <h2>Nossos Jogos e Segurança</h2>
+            <p>Os jogos oferecidos em nossa plataforma são certificados e passam por auditorias de segurança. Possuímos **certificação SSL**, garantindo a proteção dos seus dados e transações.</p>
+        </section>
+
+        <section class="restricao-idade">
+            <h2>⚠️ Plataforma para Maiores de 18 Anos</h2>
+            <p><i class="fas fa-ban"></i> O acesso a esta plataforma é **estritamente proibido para menores de 18 anos**.</p>
+        </section>
+
+        <a href="index.html" class="btn">Voltar ao Site</a>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2018 Master Bet. Todos os direitos reservados.</p>
+        <a href="termos.html">Termos de Uso</a> | 
+        <a href="politica.html">Política de Privacidade</a>
+    </footer>
+
+</body>
+</html>

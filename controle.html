@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Bet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <div class="top-bar">
+        <div class="brand-name">Master Bet</div>
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Barra de Opções Roláveis -->
+    <div class="scrollable-bar">
+        <ul>
+            <li><a href="privacy1.html"><i class="fas fa-plane"></i> Aviator</a></li>
+            <li><a href="privacy1.html"><i class="fas fa-bomb"></i> Crash2</a></li>
+            <li><a href="casa.html"><i class="fas fa-trophy"></i> Ganha Rápido</a></li>
+            <li><a href="privacy1.html"><i class="fas fa-arrow-up"></i> Double</a></li>
+        </ul>
+    </div>
+
+    <!-- Seção de Abas -->
+    <div class="tabs-container">
+        <div class="tab active" onclick="showTab('sobre')">
+            <i class="fas fa-info-circle"></i> <span>Sobre o Site</span>
+        </div>
+        <div class="tab" onclick="showTab('disponibilidade')">
+            <i class="fas fa-globe"></i> <span>Disponibilidade</span>
+        </div>
+        <div class="tab" onclick="showTab('suporte')">
+            <i class="fas fa-headset"></i> <span>Suporte & Atendimento</span>
+        </div>
+        <div class="tab" onclick="showTab('afiliacao')">
+            <i class="fas fa-user-friends"></i> <span>Afiliação</span>
+        </div>
+        <div class="tab" onclick="showTab('politicas')">
+            <i class="fas fa-file-contract"></i> <span>Políticas</span>
+        </div>
+        <!-- Novas Abas de Levantamento e Depósito -->
+        <div class="tab" onclick="showTab('levantamento')">
+            <i class="fas fa-arrow-up"></i> <span>Levantamento</span>
+        </div>
+        <div class="tab" onclick="showTab('deposito')">
+            <i class="fas fa-arrow-down"></i> <span>Depósito</span>
+        </div>
+    </div>
+
+    <!-- Conteúdo das Abas -->
+    <div class="tab-content">
+        <div id="sobre" class="tab-panel active">
+            <h2>Sobre o Site</h2>
+            <p>O Master Bet é uma plataforma inovadora de apostas online, oferecendo uma experiência segura e confiável para todos os usuários.</p>
+        </div>
+        <div id="disponibilidade" class="tab-panel">
+            <h2>Disponibilidade</h2>
+            <p>Nossa plataforma está disponível 24/7, oferecendo suporte global e garantindo uma experiência sem interrupções.</p>
+        </div>
+        <div id="suporte" class="tab-panel">
+            <h2>Suporte & Atendimento</h2>
+            <p>Contamos com uma equipe de suporte dedicada, disponível por chat e e-mail para atender todas as suas dúvidas.</p>
+        </div>
+        <div id="afiliacao" class="tab-panel">
+            <h2>Afiliação</h2>
+            <p>Junte-se ao nosso programa de afiliados e ganhe comissões ao indicar novos usuários para a plataforma.</p>
+        </div>
+        <div id="politicas" class="tab-panel">
+            <h2>Políticas</h2>
+            <p>Confira nossos <a href="termos.html">Termos de Uso</a>, <a href="politica.html">Política de Privacidade</a> e <a href="cookies.html">Política de Cookies</a>.</p>
+        </div>
+        <!-- Conteúdo das novas Abas -->
+        <div id="levantamento" class="tab-panel">
+            <h2>Levantamento</h2>
+            <p>Realize levantamentos de seus ganhos com facilidade através dos nossos métodos de pagamento confiáveis.</p>
+        </div>
+        <div id="deposito" class="tab-panel">
+            <h2>Depósito</h2>
+            <p>Faça depósitos rápidos e seguros para começar a jogar e aproveitar nossa plataforma de apostas.</p>
+        </div>
+    </div>
+
+    <!-- Botão Flutuante de Suporte -->
+    <div class="fab" id="support-btn">
+        <i class="fas fa-headset"></i>
+    </div>
+
+    <!-- Termos e Políticas -->
+    <div class="terms-container">
+        <p>Ao continuar, você concorda com:</p>
+        <div class="terms-links">
+            <a href="termos.html"><i class="fas fa-file-contract"></i> Termos de Uso</a>
+            <a href="politica.html"><i class="fas fa-shield-alt"></i> Política de Privacidade</a>
+            <a href="cookies.html"><i class="fas fa-cookie-bite"></i> Política de Cookies</a>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+            <li><a href="suporte.html"><i class="fas fa-headset"></i> Suporte</a></li>
+            <li><a href="ajuda.html"><i class="fas fa-question-circle"></i> Ajuda</a></li>
+            <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        // Função para alternar o menu
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('menu').classList.toggle('active');
+        });
+
+        document.getElementById('support-btn').addEventListener('click', function() {
+            window.location.href = "suporte.html"; 
+        });
+    </script>
+
+</body>
+</html>

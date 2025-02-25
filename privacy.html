@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Restrito</title>
+    <style>
+        /* Importando fonte moderna */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Corpo da página */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e1e2f, #3a3a5d);
+            color: white;
+            text-align: center;
+        }
+
+        /* Container do aviso */
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        /* Título */
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Mensagem */
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        /* Botão */
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #ff4757;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            text-decoration: none;
+        }
+
+        /* Efeito de hover */
+        .btn:hover {
+            background: #e84118;
+            transform: scale(1.05);
+        }
+
+        /* Animação de entrada */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsividade */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+            }
+            .btn {
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Acesso Restrito</h1>
+        <p>Você precisa estar cadastrado para acessar o jogo.</p>
+        <a href="cadastro.html" class="btn">Cadastrar se</a>
+        
+    </div>
+
+</body>
+</html>

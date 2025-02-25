@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Bet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDPfRQJx8U4QQQEZbZxz-DF-KMt2ulgz_A",
+            authDomain: "cassino-aviator.firebaseapp.com",
+            projectId: "cassino-aviator",
+            storageBucket: "cassino-aviator.appspot.com",
+            messagingSenderId: "553769873145",
+            appId: "1:553769873145:android:9049a02272ab9b6f313c28",
+            measurementId: "G-XXXXXX"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <div class="top-bar">
+        <div class="brand-name">Master Bet</div>
+        <div class="bottom-bar">
+            Sua mensagem aqui
+        </div>
+
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Barra de opções roláveis -->
+    <div class="scrollable-bar">
+        <ul>
+            <li><a href="privacy1.html"><i class="fas fa-plane"></i> Aviator</a></li>
+            <li><a href="privacy1.html"><i class="fas fa-bomb"></i> Crash2</a></li>
+            <li><a href="privacy1.html"><i class="fas fa-trophy"></i> Ganha Rápido</a></li>
+            <li><a href="privacy1.html"><i class="fas fa-arrow-up"></i> Double</a></li>
+        </ul>
+    </div>
+
+    <!-- Formulário de Levantamento -->
+    <div class="login-container">
+        <h2>Depósito</h2>
+        <form id="levantar-form">
+            <label for="numero">Número Depositado </label>
+            <input type="text" id="numero" name="numero" required>
+
+            <label for="valor">ID da transação </label>
+            <input type="text" id="valor" name="valor" required>
+
+            <!-- Seleção do método de pagamento -->
+            <label for="metodo-pagamento">Escolha o método de pagamento:</label>
+            <select id="metodo-pagamento" name="metodo-pagamento" required>
+                <option value="emola">e-mola</option>
+                <option value="mpesa">m-pesa</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <button type="submit">Levantar</button>
+        </form>
+    </div>
+    
+    <!-- Botão Flutuante de Suporte -->
+    <div class="fab" id="support-btn">
+        <i class="fas fa-headset"></i>
+    </div>
+    
+    <!-- Termos e Políticas -->
+    <div class="terms-container">
+        <p>Ao continuar, você concorda com:</p>
+        <div class="terms-links">
+            <a href="termos.html"><i class="fas fa-file-contract"></i> Termos de Uso</a>
+            <a href="politica.html"><i class="fas fa-shield-alt"></i> Política de Privacidade</a>
+            <a href="cookies.html"><i class="fas fa-cookie-bite"></i> Política de Cookies</a>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            <li><a href="cadastro.html"><i class="fas fa-user-plus"></i> Registre-se</a></li>
+            <li><a href="suporte.html"><i class="fas fa-headset"></i> Suporte</a></li>
+            <li><a href="ajuda.html"><i class="fas fa-question-circle"></i> Ajuda</a></li>
+            <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+        </ul>
+    </div>
+    
+    <div class="bottom-bar">
+        <div class="bottom-bar-icon">
+            <i class="fas fa-futbol"></i>
+            <span>Desporto</span>
+        </div>
+        <div class="bottom-bar-icon active">
+            <i class="fas fa-user"></i>
+            <span>Usuário</span>
+        </div>
+        <div class="bottom-bar-icon">
+            <i class="fas fa-history"></i>
+            <span>Histórico</span>
+        </div>
+    </div>
+
+    <!-- Banner de Cookies -->
+    <div id="cookie-banner">
+        <p>Este site usa cookies para melhorar sua experiência. <a href="cookies.html">Saiba mais</a>.</p>
+        <button id="accept-cookies">Aceitar</button>
+    </div>
+
+    <script>
+        // Função de levantamento (apenas exemplo)
+        document.getElementById('levantar-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var numero = document.getElementById('numero').value;
+            var valor = document.getElementById('valor').value;
+            var metodoPagamento = document.getElementById('metodo-pagamento').value;
+
+            // Aqui você pode fazer a lógica de envio para o backend ou para uma API para processar o levantamento
+            alert('Levantamento solicitado para o número ' + numero + ' no valor de ' + valor + ' via ' + metodoPagamento);
+        });
+
+        // Alternar menu
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('menu').classList.toggle('active');
+        });
+
+        // Redirecionamento para suporte
+        document.getElementById('support-btn').addEventListener('click', function() {
+            window.location.href = "suporte.html"; 
+        });
+
+        // Banner de Cookies
+        document.getElementById('accept-cookies').addEventListener('click', function() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+        });
+
+        if (localStorage.getItem('cookiesAccepted') === 'true') {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+    </script>
+
+    <style>
+        /* Estilização do Banner de Cookies */
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+
+        #cookie-banner button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+
+</body>
+</html>
